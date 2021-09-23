@@ -15,9 +15,13 @@ function App() {
   return (
     <>
       <Header title="Lista zadań" />
-      <main className="main"> 
+      <main className="main">
         <Section title="Dodaj nowe zadanie" body={<Form />} />
-        <Section title="Lista zadań" body={<TaskList tasks={tasks} hideDoneTasks={hideDoneTasks} />} extraHeaderContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />} />
+        <Section
+          title="Lista zadań"
+          body={<TaskList tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+          extraHeaderContent={<Buttons tasks={tasks} hideDoneTasks={hideDoneTasks} />}
+        />
       </main>
     </>
   );
