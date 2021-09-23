@@ -1,3 +1,7 @@
+.section__buttonWrapper {
+    margin: 0 10px;
+}
+
 .section__button {
     font-family: Montserrat, sans-serif;
     border: none;
