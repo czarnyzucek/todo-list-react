@@ -16,6 +16,10 @@ function App() {
     sethideDone(hideDone => !hideDone);
   };
 
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
+  };
+
   return (
     <>
       <Header title="Lista zadań" />
@@ -23,7 +27,13 @@ function App() {
         <Section title="Dodaj nowe zadanie" body={<Form />} />
         <Section
           title="Lista zadań"
-          body={<Tasks tasks={tasks} hideDone={hideDone} />}
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDone={hideDone}
+              removeTask={removeTask}
+            />
+          }
           extraHeaderContent={
             <Buttons
               tasks={tasks}
