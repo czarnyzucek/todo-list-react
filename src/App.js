@@ -15,7 +15,7 @@ function App() {
 
   const toggleHideDone = () => {
     sethideDone(hideDone => !hideDone);
-  }
+  };
 
   return (
     <>
@@ -25,7 +25,13 @@ function App() {
         <Section
           title="Lista zadań"
           body={<TaskList tasks={tasks} hideDone={hideDone} />}
-          extraHeaderContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+          extraHeaderContent={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+            />
+          }
         />
       </main>
     </>
